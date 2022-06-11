@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="detail_payer_id_1" type="id" />
+    <item name="detail_payer_id_2" type="id" />
+    <item name="detail_payer_id_3" type="id" />
+    <item name="detail_payer_id_4" type="id" />
+    <item name="detail_payer_id_5" type="id" />
+    <item name="detail_payer_id_6" type="id" />
+    <item name="detail_payer_id_7" type="id" />
+    <item name="detail_payer_id_8" type="id" />
+    <item name="detail_payer_id_9" type="id" />
+    <item name="detail_payer_id_10" type="id" />
+
+    <item name="detail_borrower_id_1" type="id" />
+    <item name="detail_borrower_id_2" type="id" />
+    <item name="detail_borrower_id_3" type="id" />
+    <item name="detail_borrower_id_4" type="id" />
+    <item name="detail_borrower_id_5" type="id" />
+    <item name="detail_borrower_id_6" type="id" />
+    <item name="detail_borrower_id_7" type="id" />
+    <item name="detail_borrower_id_8" type="id" />
+    <item name="detail_borrower_id_9" type="id" />
+    <item name="detail_borrower_id_10" type="id" />
+</resources>

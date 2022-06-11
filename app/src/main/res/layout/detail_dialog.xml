@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="내용 " />
+        <EditText
+            android:id="@+id/detail_description_dlg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="금액 " />
+        <EditText
+            android:id="@+id/detail_cost_dlg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="원" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal" >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_rectangle"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_second_rectangle"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="돈 낸 사람" />
+            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/detail_payer_radio_dlg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+                <RadioButton
+                    android:id="@+id/detail_payer_id_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:text="test"
+                    android:textSize="20sp" />
+                <RadioButton
+                    android:id="@+id/detail_payer_id_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <RadioButton
+                    android:id="@+id/detail_payer_id_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <RadioButton
+                    android:id="@+id/detail_payer_id_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <RadioButton
+                    android:id="@+id/detail_payer_id_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <RadioButton
+                    android:id="@+id/detail_payer_id_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <RadioButton
+                    android:id="@+id/detail_payer_id_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <RadioButton
+                    android:id="@+id/detail_payer_id_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <RadioButton
+                    android:id="@+id/detail_payer_id_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <RadioButton
+                    android:id="@+id/detail_payer_id_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_rectangle"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_second_rectangle"
+                android:orientation="vertical" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="돈 갚을 사람" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/detail_borrower_radio_dlg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+                <CheckBox
+                    android:id="@+id/detail_borrower_id_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <CheckBox
+                    android:id="@+id/detail_borrower_id_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <CheckBox
+                    android:id="@+id/detail_borrower_id_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <CheckBox
+                    android:id="@+id/detail_borrower_id_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <CheckBox
+                    android:id="@+id/detail_borrower_id_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <CheckBox
+                    android:id="@+id/detail_borrower_id_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <CheckBox
+                    android:id="@+id/detail_borrower_id_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <CheckBox
+                    android:id="@+id/detail_borrower_id_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <CheckBox
+                    android:id="@+id/detail_borrower_id_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+                <CheckBox
+                    android:id="@+id/detail_borrower_id_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:visibility="gone"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/detail_check_btn_dlg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="확인" />
+
+</LinearLayout>

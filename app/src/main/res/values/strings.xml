@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">samesamebill</string>
+    <string name="info_title">정보</string>
+    <string name="info_group_name_st">모임명 : %1$s</string>
+    <string name="info_date_st">날    짜 : %1$s</string>
+    <string name="participant_title">참여자</string>
+    <string name="detail_title">지출 내역</string>
+    <string name="info_group_name_dlg_st">모임명</string>
+    <string name="info_date_dlg_st">날짜</string>
+    <string name="check_btn_st">확인</string>
+    <string name="participant_names_limit_dlg">참여자 이름을 띄어쓰기로 작성해주세요. (ex. "길동 영희 철수")</string>
+    <string name="detail_payer_st">돈 낸 사람 : %1$s</string>
+</resources>
