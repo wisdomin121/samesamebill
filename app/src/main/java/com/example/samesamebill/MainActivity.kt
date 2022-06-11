@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.LinearLayout
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.samesamebill.databinding.ActivityMainBinding
 import kotlin.properties.Delegates
 
@@ -50,6 +51,11 @@ class MainActivity : AppCompatActivity() {
             })
         }
 
+        val dataSet = ArrayList<List<Any>>()
+        val adapter = DetailAdapter(dataSet)
+        binding.detailRecyclerView.layoutManager = LinearLayoutManager(this)
+        binding.detailRecyclerView.adapter = adapter
+
         binding.detailAddBtn.setOnClickListener {
             val detailDlg = DetailDialog(this)
             val payerIds = ArrayList<Int>()
@@ -67,10 +73,7 @@ class MainActivity : AppCompatActivity() {
             detailDlg.myDialog(n, payerIds, borrowerIds)
             detailDlg.setOnClickedListener(object: DetailDialog.ButtonClickListener {
                 override fun onClicked(description: String, cost: Int, payer: String, borrower: ArrayList<String>) {
-                    binding.detailDescription.text = description
-                    binding.detailCost.text = String.format(cost.toString(), "원")
-                    binding.detailPayer.text = String.format("돈 낸 사람 : ", payer)
-                    Log.d("TEST", "$borrower")
+                    adapter.addItem(listOf(description, cost.toString()+"원", "돈 낸 사람 : "+payer))
                     des = description
                     c = cost
                     p = payer
