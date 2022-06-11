@@ -10,4 +10,7 @@
     <string name="check_btn_st">확인</string>
     <string name="participant_names_limit_dlg">참여자 이름을 띄어쓰기로 작성해주세요. (ex. "길동 영희 철수")</string>
     <string name="detail_payer_st">돈 낸 사람 : %1$s</string>
+    <string name="line">"------------------------------------------------------------------------------------"</string>
+    <string name="last_ment">행복하세요 :)</string>
+    <string name="bill_title">영수증</string>
 </resources>

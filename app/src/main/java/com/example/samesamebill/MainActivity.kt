@@ -1,6 +1,7 @@
 package com.example.samesamebill
 
 import android.app.ActionBar
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -80,6 +81,11 @@ class MainActivity : AppCompatActivity() {
                     b = borrower
                 }
             })
+        }
+
+        binding.calculationBtn.setOnClickListener {
+            val intent:Intent = Intent(this, BillActivity::class.java)
+            startActivity(intent)
         }
     }
 }
