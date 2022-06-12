@@ -6,6 +6,7 @@ import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import java.util.*
+import kotlin.collections.ArrayList
 
 class ParticipantDialog(context: Context) {
     private val dialog = Dialog(context)
@@ -21,18 +22,23 @@ class ParticipantDialog(context: Context) {
         dialog.setCancelable(true)
         dialog.show()
 
-        val names = dialog.findViewById<EditText>(R.id.participant_names_dlg)
+        var names = dialog.findViewById<EditText>(R.id.participant_names_dlg)
         val btnCheck = dialog.findViewById<Button>(R.id.participant_check_btn_dlg)
 
         btnCheck.setOnClickListener {
-            onClickedListener.onClicked(names.text.toString().split(" "))
+            val extraNames= names.text.toString().split(" ")
+            val arrayListNames = ArrayList<String>()
+            for(i in 0..extraNames.size-1) {
+                arrayListNames.add(extraNames[i])
+            }
+            onClickedListener.onClicked(arrayListNames)
             dialog.dismiss()
         }
 
     }
 
     interface ButtonClickListener {
-        fun onClicked(names: List<String>)
+        fun onClicked(names: ArrayList<String>)
     }
 
     private lateinit var onClickedListener: ButtonClickListener
