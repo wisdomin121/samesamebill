@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.N)
     fun calculate(dataSet: ArrayList<ArrayList<ArrayList<String>>>, names: ArrayList<String>): ArrayList<String> {
-        val eachCosts = hashMapOf<String, Double>()
+        var eachCosts = hashMapOf<String, Double>()
         var totalCost = 0
         for(i in 0 until names.size) {
             eachCosts.put(names[i], 0.0)
@@ -38,23 +38,42 @@ class MainActivity : AppCompatActivity() {
             }
             totalCost += cost.toInt()
         }
+        Log.d("total", "${eachCosts["엄마"]}, ${eachCosts["아빠"]}, ${eachCosts["언니"]}, ${eachCosts["나"]}")
 
         var result = ArrayList<String>()
-        for((bKey,bValue) in eachCosts) {
+        for((bKey, bValue) in eachCosts) {
             if(bValue>0) {
                 for((pKey, pValue) in eachCosts) {
+                    if(pValue<0 && -pValue==bValue) {
+                        eachCosts.replace(pKey, 0.0)
+                        eachCosts.replace(bKey, 0.0)
+                        result.add("${bKey}(이)가 ${pKey}에게 ${bValue.toInt()}원")
+                        break
+                    }
+                }
+            }
+        }
+
+        for((bKey,bV) in eachCosts) {
+            var bValue = bV
+            var plus = 0.0
+            if(bValue>0) {
+                for((pKey, pValue) in eachCosts) {
+                    bValue += plus
                     if(pValue<0 && -pValue>bValue) {
-                        result.add("${bKey}(이)가 ${pKey}에게 ${bValue}원")
+                        result.add("${bKey}(이)가 ${pKey}에게 ${bValue.toInt()}원")
                         eachCosts.replace(pKey, pValue+bValue)
                         eachCosts.replace(bKey, 0.0)
+                        break
                     }else if(pValue<0 && -pValue<bValue) {
-                        result.add("${bKey}(이)가 ${pKey}에게 ${-pValue}원")
+                        result.add("${bKey}(이)가 ${pKey}에게 ${-pValue.toInt()}원")
                         eachCosts.replace(pKey, 0.0)
                         eachCosts.replace(bKey, pValue+bValue)
                     }else if(pValue<0 && -pValue==bValue) {
-                        result.add("${bKey}(이)가 ${pKey}에게 ${-pValue}원")
+                        result.add("${bKey}(이)가 ${pKey}에게 ${-pValue.toInt()}원")
                         eachCosts.replace(pKey, 0.0)
                         eachCosts.replace(bKey, 0.0)
+                        break
                     }
                 }
             }

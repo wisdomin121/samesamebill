@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">samesamebill</string>
+    <string name="app_name">samesame</string>
     <string name="info_title">정보</string>
     <string name="info_group_name_st">모임명 : %1$s</string>
     <string name="info_date_st">날    짜 : %1$s</string>

@@ -27,6 +27,10 @@ class BillActivity: AppCompatActivity() {
             tv.text = result[i]
             binding.billListItem.addView(tv)
         }
+
+        binding.backBtn.setOnClickListener {
+            onBackPressed()
+        }
     }
 }
 
