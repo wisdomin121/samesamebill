@@ -13,7 +13,6 @@ class InfoDialog(context: Context) {
         dialog.setContentView(R.layout.info_dialog)
         dialog.window!!.setLayout(WindowManager.LayoutParams.MATCH_PARENT,
                                     WindowManager.LayoutParams.WRAP_CONTENT)
-        dialog.setTitle("정보")
         dialog.setCanceledOnTouchOutside(true)
         dialog.setCancelable(true)
         dialog.show()

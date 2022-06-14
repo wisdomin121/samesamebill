@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
             }
             totalCost += cost.toInt()
         }
-        Log.d("total", "${eachCosts["엄마"]}, ${eachCosts["아빠"]}, ${eachCosts["언니"]}, ${eachCosts["나"]}")
 
         var result = ArrayList<String>()
         for((bKey, bValue) in eachCosts) {
@@ -56,10 +55,8 @@ class MainActivity : AppCompatActivity() {
 
         for((bKey,bV) in eachCosts) {
             var bValue = bV
-            var plus = 0.0
             if(bValue>0) {
                 for((pKey, pValue) in eachCosts) {
-                    bValue += plus
                     if(pValue<0 && -pValue>bValue) {
                         result.add("${bKey}(이)가 ${pKey}에게 ${bValue.toInt()}원")
                         eachCosts.replace(pKey, pValue+bValue)
@@ -69,6 +66,7 @@ class MainActivity : AppCompatActivity() {
                         result.add("${bKey}(이)가 ${pKey}에게 ${-pValue.toInt()}원")
                         eachCosts.replace(pKey, 0.0)
                         eachCosts.replace(bKey, pValue+bValue)
+                        bValue = eachCosts[bKey]!!
                     }else if(pValue<0 && -pValue==bValue) {
                         result.add("${bKey}(이)가 ${pKey}에게 ${-pValue.toInt()}원")
                         eachCosts.replace(pKey, 0.0)
